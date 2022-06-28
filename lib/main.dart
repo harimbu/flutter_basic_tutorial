@@ -7,7 +7,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(WordModelAdapter());
-  await Hive.openBox('word');
+  await Hive.openBox<WordModel>('word');
   runApp(MyApp());
 }
 

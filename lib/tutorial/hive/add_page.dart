@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic_tutorial/layout/default_layout.dart';
+import 'package:flutter_basic_tutorial/model/word_model.dart';
+import 'package:get/get.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class AddPage extends StatefulWidget {
   AddPage({Key? key}) : super(key: key);
@@ -38,7 +41,29 @@ class _AddPageState extends State<AddPage> {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () async {
+              final box = await Hive.box<WordModel>('word');
+
+              int id = 0;
+
+              if (box.isNotEmpty) {
+                final lastItem = box.getAt(box.length - 1);
+                if (lastItem != null) {
+                  id = lastItem.id + 1;
+                }
+              }
+
+              box.put(
+                id,
+                WordModel(
+                  id: id,
+                  eng: eng,
+                  kor: kor,
+                  count: 0,
+                ),
+              );
+              Get.back();
+            },
             child: Text('단어추가'),
           )
         ],
