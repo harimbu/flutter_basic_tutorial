@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic_tutorial/tutorial/firebase/firebase_home.dart';
 import 'package:flutter_basic_tutorial/tutorial/hive/hive_home.dart';
 import 'package:flutter_basic_tutorial/tutorial/json/json_home.dart';
-import 'package:flutter_basic_tutorial/tutorial/sqlite/sqlite_home.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Route(title: 'hive', page: HiveHome()),
     Route(title: 'firebase', page: FirebaseHome()),
     Route(title: 'json', page: JsonHome()),
-    Route(title: 'sqlite', page: SqliteHome()),
   ];
 
   renderRoute({required Route route}) {
