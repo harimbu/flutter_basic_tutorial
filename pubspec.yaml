@@ -17,6 +17,7 @@ dependencies:
   hive: ^2.2.2
   hive_flutter: ^1.1.0
   odometer: ^3.0.0
+  dio:
   
   # sqlite drift
   drift: ^1.7.0

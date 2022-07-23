@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic_tutorial/model/word_model.dart';
-import 'package:flutter_basic_tutorial/tutorial/home_screen.dart';
+import 'package:flutter_basic_tutorial/theme/app_theme.dart';
+import 'package:flutter_basic_tutorial/tutorial/home.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -19,12 +20,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          elevation: 0,
-        ),
-      ),
-      home: HomeScreen(),
+      theme: AppThemme.light,
+      darkTheme: AppThemme.dark,
+      home: Home(),
     );
   }
 }
