@@ -10,8 +10,8 @@ class StudentController extends GetxController {
 
   @override
   void onInit() {
-    super.onInit();
     getStudent();
+    super.onInit();
   }
 
   void getStudent() async {

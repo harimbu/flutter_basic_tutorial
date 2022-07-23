@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_tutorial/tutorial/json/json_address.dart';
-import 'package:flutter_basic_tutorial/tutorial/json/json_student.dart';
+import 'package:flutter_basic_tutorial/tutorial/json/address.dart';
+import 'package:flutter_basic_tutorial/tutorial/json/photo.dart';
+import 'package:flutter_basic_tutorial/tutorial/json/product.dart';
+import 'package:flutter_basic_tutorial/tutorial/json/shape.dart';
+import 'package:flutter_basic_tutorial/tutorial/json/student.dart';
 import 'package:get/get.dart';
 import 'package:flutter_basic_tutorial/tutorial/firebase/firebase_home.dart';
 import 'package:flutter_basic_tutorial/tutorial/hive/hive_home.dart';
@@ -22,8 +25,11 @@ class Home extends StatelessWidget {
     Route(title: 'hive', page: HiveHome()),
     Route(title: 'lotto', page: Lotto()),
     Route(title: 'odometer', page: Odometer()),
-    Route(title: 'json-student', page: JsonStudent()),
-    Route(title: 'json-address', page: JsonAddress()),
+    Route(title: 'json-student', page: Student()),
+    Route(title: 'json-address', page: Address()),
+    Route(title: 'json-shape', page: Shape()),
+    Route(title: 'json-product', page: Product()),
+    Route(title: 'json-photo', page: Photo()),
   ];
 
   @override
