@@ -14,7 +14,14 @@ class JsonStudent extends StatelessWidget {
     _builScreen() {
       return Center(
         child: controller.student != null
-            ? Text('${controller.student!.name}')
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('${controller.student!.id}'),
+                  Text('${controller.student!.name}'),
+                  Text('${controller.student!.score}'),
+                ],
+              )
             : Container(),
       );
     }

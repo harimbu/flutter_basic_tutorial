@@ -16,6 +16,7 @@ class StudentController extends GetxController {
 
   void getStudent() async {
     try {
+      isLoading(true);
       final jsonString = await rootBundle.loadString('assets/student.json');
       final jsonResponse = await jsonDecode(jsonString);
       student = Student.fromJson(jsonResponse);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_tutorial/tutorial/json/json_address.dart';
 import 'package:flutter_basic_tutorial/tutorial/json/json_student.dart';
 import 'package:get/get.dart';
 import 'package:flutter_basic_tutorial/tutorial/firebase/firebase_home.dart';
@@ -22,6 +23,7 @@ class Home extends StatelessWidget {
     Route(title: 'lotto', page: Lotto()),
     Route(title: 'odometer', page: Odometer()),
     Route(title: 'json-student', page: JsonStudent()),
+    Route(title: 'json-address', page: JsonAddress()),
   ];
 
   @override
